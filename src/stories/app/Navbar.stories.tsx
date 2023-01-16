@@ -1,7 +1,9 @@
 import Navbar from "../../app/Navbar";
 
-export default {
+const navbar = {
   title: "App/Navbar",
   component: Navbar,
 };
+
+export default navbar;
 export const NavbarPage = () => <Navbar />;

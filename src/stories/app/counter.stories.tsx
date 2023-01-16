@@ -1,8 +1,9 @@
 import Counter from "../../app/counter/page";
 
-export default {
+const counter = {
   title: "App/Counter",
   component: Counter,
 };
 
+export default counter;
 export const CounterPage = () => <Counter />;
