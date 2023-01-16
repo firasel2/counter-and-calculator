@@ -1,5 +1,6 @@
 "use client";
-import React, { useState } from "react";
+import React, { MouseEventHandler, useState } from "react";
+import Button from "./Button";
 
 const Counter = () => {
   const [counter, setCounter] = useState<number>(0);
@@ -20,20 +21,12 @@ const Counter = () => {
           {/* Display end */}
           {/* Control button start */}
           <div className="flex items-center gap-2 mt-2 text-2xl">
-            <button
-              className="w-full p-2 rounded-md bg-emerald-300 text-black/50"
-              onClick={handleIncrement}
-              data-testid="increment"
-            >
-              +
-            </button>
-            <button
-              className="w-full p-2 rounded-md bg-orange-300 text-black/50"
-              onClick={handleDecrement}
-              data-testid="decrement"
-            >
-              -
-            </button>
+            <Button handleClick={handleIncrement} color={"primary"} text="+" />
+            <Button
+              handleClick={handleDecrement}
+              color={"secondary"}
+              text="-"
+            />
           </div>
           {/* Control button end */}
         </div>
